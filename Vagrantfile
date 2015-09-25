@@ -16,6 +16,19 @@ Vagrant.configure(2) do |config|
   ['jenkins1', 'jenkins2'].each do | vmname |
       config.vm.define vmname do | vagrantbox |
           vagrantbox.vm.box = "centos/7"
+          vagrantbox.vm.hostname = vmname
+          vagrantbox.vm.synced_folder "modules/", "/srv/puppet/modules"
+          vagrantbox.vm.synced_folder "hiera/", "/srv/puppet/hiera"
+          vagrantbox.vm.synced_folder "manifests/", "/srv/puppet/manifests"
+          vagrantbox.vm.synced_folder "jjb-phabricator", "/srv/git/jjb-phabricator"
+          vagrantbox.vm.provision "shell", inline: <<-SHELL
+          if ! test -d /etc/puppetlabs
+              then
+              sudo yum install http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm -y
+              sudo yum install -y puppet-agent
+              fi
+              sudo /opt/puppetlabs/bin/puppet apply --modulepath=/srv/puppet/modules --hiera_config /srv/puppet/hiera/hiera.yaml /srv/puppet/manifests --verbose
+SHELL
       end
   end
 

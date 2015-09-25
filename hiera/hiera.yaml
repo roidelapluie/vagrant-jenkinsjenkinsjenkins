@@ -1,0 +1,8 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: "/srv/puppet/hiera/hieradata"
+:hierarchy:
+  - "%{::trusted.certname}"
+  - "common"
