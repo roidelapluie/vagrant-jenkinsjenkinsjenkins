@@ -13,15 +13,18 @@ Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
 
-  ['jenkins1', 'jenkins2'].each do | vmname |
+  ['jenkins1', 'jenkins2'].each_with_index do | vmname, index |
       config.vm.define vmname do | vagrantbox |
+          vagrantbox.vm.network "private_network", ip: "192.168.50.#{index + 2}"
           vagrantbox.vm.box = "centos/7"
           vagrantbox.vm.hostname = vmname
           vagrantbox.vm.synced_folder "modules/", "/srv/puppet/modules"
           vagrantbox.vm.synced_folder "hiera/", "/srv/puppet/hiera"
           vagrantbox.vm.synced_folder "manifests/", "/srv/puppet/manifests"
           vagrantbox.vm.synced_folder "jjb-phabricator", "/srv/git/jjb-phabricator"
+          vagrantbox.vm.synced_folder "JenkinsJenkinsJenkins", "/srv/www/jenkinsjenkinsjenkins"
           vagrantbox.vm.provision "shell", inline: <<-SHELL
+          setenforce 0
           if ! test -d /etc/puppetlabs
               then
               sudo yum install http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm -y

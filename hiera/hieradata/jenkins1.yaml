@@ -1,2 +1,7 @@
 ---
 profile_jjb::pipeline: jenkins1
+jenkinsjenkinsjenkins::jenkins_proxy:
+- path: /jenkins/1
+  url: http://192.168.50.2:8080/
+- path: /jenkins/2
+  url: http://192.168.50.3:8080/

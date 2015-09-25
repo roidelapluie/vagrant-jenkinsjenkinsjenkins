@@ -31,3 +31,9 @@
 [submodule "modules/vcsrepo"]
 	path = modules/vcsrepo
 	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
+[submodule "modules/jenkinsjenkinsjenkins"]
+	path = modules/jenkinsjenkinsjenkins
+	url = git@github.com:roidelapluie/puppet-jenkinsjenkinsjenkins
+[submodule "modules/concat"]
+	path = modules/concat
+	url = git@github.com:puppetlabs/puppetlabs-concat
