@@ -1,0 +1,3 @@
+[submodule "JenkinsJenkinsJenkins"]
+	path = JenkinsJenkinsJenkins
+	url = git@github.com:roidelapluie/JenkinsJenkinsJenkins.git
