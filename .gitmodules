@@ -28,6 +28,9 @@
 [submodule "modules/profile_jjb"]
 	path = modules/profile_jjb
 	url = git@github.com:roidelapluie/puppet-profile_jjb.git
+[submodule "modules/profile_jenkins"]
+	path = modules/profile_jenkins
+    url = git@github.com:roidelapluie/puppet-profile_jenkins.git
 [submodule "modules/vcsrepo"]
 	path = modules/vcsrepo
 	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
