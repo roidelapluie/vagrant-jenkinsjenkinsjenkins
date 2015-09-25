@@ -31,6 +31,6 @@
 [submodule "modules/vcsrepo"]
 	path = modules/vcsrepo
 	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
-[submodule "modules/jjb-phabricator"]
-	path = modules/jjb-phabricator
+[submodule "jjb-phabricator"]
+	path = jjb-phabricator
 	url = git@github.com:roidelapluie/jjb-phabricator.git
