@@ -1,3 +1,36 @@
 [submodule "JenkinsJenkinsJenkins"]
 	path = JenkinsJenkinsJenkins
 	url = git@github.com:roidelapluie/JenkinsJenkinsJenkins.git
+[submodule "modules/apache"]
+	path = modules/apache
+	url = git@github.com:puppetlabs/puppetlabs-apache
+[submodule "modules/stdlib"]
+	path = modules/stdlib
+	url = git@github.com:puppetlabs/puppetlabs-stdlib
+[submodule "modules/jenkins"]
+	path = modules/jenkins
+	url = git@github.com:jenkinsci/puppet-jenkins
+[submodule "modules/java"]
+	path = modules/java
+	url = git@github.com:puppetlabs/puppetlabs-java
+[submodule "modules/archive"]
+	path = modules/archive
+	url = git@github.com:camptocamp/puppet-archive.git
+[submodule "modules/jjb"]
+	path = modules/jjb
+	url = git@github.com:roidelapluie/puppet-jjb
+[submodule "modules/python"]
+	path = modules/python
+	url = git@github.com:stankevich/puppet-python
+[submodule "modules/epel"]
+	path = modules/epel
+	url = https://github.com/stahnma/puppet-module-epel
+[submodule "modules/profile_jjb"]
+	path = modules/profile_jjb
+	url = git@github.com:roidelapluie/puppet-profile_jjb.git
+[submodule "modules/vcsrepo"]
+	path = modules/vcsrepo
+	url = https://github.com/puppetlabs/puppetlabs-vcsrepo.git
+[submodule "modules/jjb-phabricator"]
+	path = modules/jjb-phabricator
+	url = git@github.com:roidelapluie/jjb-phabricator.git
